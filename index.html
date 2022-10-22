@@ -25,11 +25,11 @@
                     tdid.innerHTML=products.id;
                     tdCamera.innerHTML=products.camera.full_name;
                     
-                    var img=document.createElement("img");
-                    img.src=products.img_src;
-                    img.width="100";
-                    img.height="100";
-                    tdPhoto.appendChild(img);
+                   tdPhoto.innerHTML=`
+                     <a href=${products.img_src} target="_blank">
+                        <img src=${products.img_src} width="100" height="100">
+                    </a>
+                   `;
 
                     tdRover.innerHTML=products.rover.name;
                      
